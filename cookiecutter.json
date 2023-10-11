@@ -1,0 +1,21 @@
+{
+    "name": "project",
+    "swift_version": "5.7",
+    "package_version": "1.0.0",
+    "ios": [
+        "Yes",
+        "No"
+    ],
+    "macOS": [
+        "Yes",
+        "No"
+    ],
+    "watchOS": [
+        "Yes",
+        "No"
+    ],
+    "tvOS": [
+        "Yes",
+        "No"
+    ]
+}
