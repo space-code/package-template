@@ -50,7 +50,7 @@ make bootstrap
 Please feel free to help out with this project! If you see something that could be made better or want a new feature, open up an issue or send a Pull Request!
 
 ## Author
-Nikita Vasilev, nv3212@gmail.com
+{{ cookiecutter.author }}, {{ cookiecutter.email }}
 
 ## License
 {{ cookiecutter.name | lower }} is available under the MIT license. See the LICENSE file for more info.

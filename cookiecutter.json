@@ -2,6 +2,8 @@
     "name": "project",
     "swift_version": "5.7",
     "package_version": "1.0.0",
+    "author": "",
+    "email": "",
     "ios": [
         "Yes",
         "No"
