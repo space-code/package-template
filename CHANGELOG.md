@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+## Added
+- Add issues and pull request templates
+  - Added in Pull Request [#1](https://github.com/package-templates/pull/1).
+
 #### 1.x Releases
 - `1.0.x` Releases - [1.0.0](#100)
 
