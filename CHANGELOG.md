@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## Added
+- Integrate `danger`
+  - Added in Pull Request [#2](https://github.com/package-templates/pull/2).
+
 - Add issues and pull request templates
   - Added in Pull Request [#1](https://github.com/package-templates/pull/1).
 
