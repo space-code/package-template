@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## Added
+- Update GitHub Actions configuration
+  - Added in Pull Request [#4](https://github.com/space-code/package-template/pull/4)
+
 - Integrate `danger`
   - Added in Pull Request [#2](https://github.com/space-code/package-template/pull/2).
 
