@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+## Added
+- Implement typo checking
+  - Added in Pull Request [#7](https://github.com/space-code/package-template/pull/7).
+
 #### 1.x Releases
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
 - `1.0.x` Releases - [1.0.0](#100)
