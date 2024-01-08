@@ -2,7 +2,8 @@
 
 <p align="center">
 <a href="https://github.com/space-code/{{ cookiecutter.name | lower }}/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/space-code/{{ cookiecutter.name | lower }}?style=flat"></a> 
-<a href="https://developer.apple.com/swift"><img alt="{{ cookiecutter.swift_version }}" src="https://img.shields.io/badge/language-Swift{{ cookiecutter.swift_version }}-orange.svg"/></a>
+<a href="https://swiftpackageindex.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Swift Compatibility" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fspace-code%2F{{ cookiecutter.name | lower }}%2Fbadge%3Ftype%3Dswift-versions"/></a> 
+<a href="https://swiftpackageindex.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Platform Compatibility" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fspace-code%2F{{ cookiecutter.name | lower }}%2Fbadge%3Ftype%3Dplatforms"/></a> 
 <a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="CI" src="https://github.com/space-code/{{ cookiecutter.name }}/actions/workflows/ci.yml/badge.svg?branch=main"></a>
 <a href="https://github.com/apple/swift-package-manager" alt="{{ cookiecutter.name | lower }} on Swift Package Manager" title="{{ cookiecutter.name | lower }} on Swift Package Manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" /></a>
 </p>
