@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## Added
+- Update the Ruby version from 2.7 to 3.1.4
+  - Added in Pull Request [#8](https://github.com/space-code/package-template/pull/8).
 - Implement typo checking
   - Added in Pull Request [#7](https://github.com/space-code/package-template/pull/7).
 
