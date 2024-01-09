@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## Added
+- Update the GitHub Actions configuration
+  - Added in Pull Request [#10](https://github.com/space-code/package-template/pull/10).
 - Add the Swift Package Index badges to `README.md`
   - Added in Pull Request [#9](https://github.com/space-code/package-template/pull/9).
 - Update the Ruby version from 2.7 to 3.1.4
