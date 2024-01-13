@@ -19,5 +19,9 @@
     "tvOS": [
         "Yes",
         "No"
+    ],
+    "additional_badges": [
+        "Yes",
+        "No"
     ]
 }
