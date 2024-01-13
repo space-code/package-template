@@ -5,6 +5,14 @@
 <a href="https://swiftpackageindex.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Swift Compatibility" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fspace-code%2F{{ cookiecutter.name | lower }}%2Fbadge%3Ftype%3Dswift-versions"/></a> 
 <a href="https://swiftpackageindex.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Platform Compatibility" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fspace-code%2F{{ cookiecutter.name | lower }}%2Fbadge%3Ftype%3Dplatforms"/></a> 
 <a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="CI" src="https://github.com/space-code/{{ cookiecutter.name }}/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+{% if cookiecutter.ios == "Yes" %}
+<a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Number of GitHub contributors" src="https://img.shields.io/github/issues/space-code/{{ cookiecutter.name | lower }}"></a>
+<a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Number of GitHub issues that are open" src="https://img.shields.io/github/stars/space-code/{{ cookiecutter.name | lower }}"></a>
+<a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Number of GitHub closed issues" src="https://img.shields.io/github/issues-closed/space-code/{{ cookiecutter.name | lower }}"></a>
+<a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Number of GitHub stars" src="https://img.shields.io/github/contributors/space-code/{{ cookiecutter.name | lower }}"></a>
+<a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="Number of GitHub pull requests that are open" src="https://img.shields.io/github/issues-pr-raw/space-code/{{ cookiecutter.name | lower }}"></a>
+{% endif %}
+<a href="https://github.com/space-code/{{ cookiecutter.name | lower }}"><img alt="GitHub release; latest by date" src="https://img.shields.io/github/v/release/space-code/{{ cookiecutter.name | lower }}"></a>
 <a href="https://github.com/apple/swift-package-manager" alt="{{ cookiecutter.name | lower }} on Swift Package Manager" title="{{ cookiecutter.name | lower }} on Swift Package Manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" /></a>
 </p>
 
