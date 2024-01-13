@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## Added
+- Add `DocC` deployment template
+  - Added in Pull Request[#13](https://github.com/space-code/package-template/pull/13).
 - Add additional badges to `README.md`
   - Added in Pull Request [#12](https://github.com/space-code/package-template/pull/12).
 - Add files to comply with community standards
