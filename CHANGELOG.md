@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## Added
+- Add files to comply with community standards
+  - Added in Pull Request [#11](https://github.com/space-code/package-template/pull/11).
 - Update the GitHub Actions configuration
   - Added in Pull Request [#10](https://github.com/space-code/package-template/pull/10).
 - Add the Swift Package Index badges to `README.md`
