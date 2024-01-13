@@ -23,5 +23,9 @@
     "additional_badges": [
         "Yes",
         "No"
+    ],
+    "deploy_docc": [
+        "Yes",
+        "No"
     ]
 }
