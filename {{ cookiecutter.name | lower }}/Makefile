@@ -4,7 +4,7 @@ bootstrap: hook
 	mint bootstrap
 
 hook:
-	ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
+	ln -sf .git/hooks/pre-commit ../../hooks/pre-commit 
 	chmod +x .git/hooks/pre-commit
 
 mint:

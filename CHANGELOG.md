@@ -19,6 +19,10 @@ All notable changes to this project will be documented in this file.
 - Implement typo checking
   - Added in Pull Request [#7](https://github.com/space-code/package-template/pull/7).
 
+## Updated
+- Update `post_get_project` script
+  - Updated in Pull Request[#14](https://github.com/space-code/package-template/pull/14).
+
 #### 1.x Releases
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
 - `1.0.x` Releases - [1.0.0](#100)
