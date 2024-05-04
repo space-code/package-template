@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## Added
+- Add the `Dependapot` action
+  - Added in Pull Request [#15](https://github.com/space-code/package-template/pull/15).
 - Add `DocC` deployment template
   - Added in Pull Request[#13](https://github.com/space-code/package-template/pull/13).
 - Add additional badges to `README.md`
