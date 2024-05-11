@@ -18,13 +18,16 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      {% raw %}
+      {% raw -%}
       url: ${{ steps.deployment.outputs.page_url }}
-      {% endraw %}
+      {% endraw -%}
     runs-on: macos-12
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+          # Fetch all history for all branches and tags.
+          fetch-depth: 0
+        {% if cookiecutter.docc_custom_branch == "No" -%}
       - name: Build DocC
         run: |
           swift build;
@@ -42,3 +45,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      {% endif -%}
+      {% if cookiecutter.docc_custom_branch == "Yes" -%}
+      - name: Build and Push Generated Documentation
+        uses: space-code/oss-common-actions/.github/actions/publish_docc@main
+        with:
+          target: {{ cookiecutter.name }}
+          output_path: ./docs
+          hosting_base_path: {{ cookiecutter.name | lower }}
+      {% endif -%}

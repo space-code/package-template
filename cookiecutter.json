@@ -28,5 +28,9 @@
     "deploy_docc": [
         "Yes",
         "No"
+    ],
+    "docc_custom_branch": [
+        "Yes",
+        "No"
     ]
 }

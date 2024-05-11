@@ -22,8 +22,10 @@ All notable changes to this project will be documented in this file.
   - Added in Pull Request [#7](https://github.com/space-code/package-template/pull/7).
 
 ## Updated
-- Update `post_get_project` script
-  - Updated in Pull Request[#14](https://github.com/space-code/package-template/pull/14).
+- Update the `deploy_docc.yml` action
+  - Updated in Pull Request [#18](https://github.com/space-code/package-template/pull/18).
+- Update the `post_get_project` script
+  - Updated in Pull Request [#14](https://github.com/space-code/package-template/pull/14).
 
 #### 1.x Releases
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
