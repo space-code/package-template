@@ -23,20 +23,20 @@ jobs:
         with:
           args: --strict
         env:
-          {% raw %}
+          {%- raw %}
           DIFF_BASE: ${{ github.base_ref }}
-          {% endraw %}
+          {%- endraw %}
 
-  {% if cookiecutter.macOS == "Yes" %}
+  {%- if cookiecutter.macOS == "Yes" %}
   macOS:
-    {% raw %}
+    {%- raw %}
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.runsOn }}
-    {% endraw %}
+    {%- endraw %}
     env:
-      {% raw %}
+      {%- raw %}
       DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-      {% endraw %}
+      {%- endraw %}
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -56,38 +56,38 @@ jobs:
             name: "macOS 12, Xcode 14.1, Swift 5.7.1"
     steps:
       - uses: actions/checkout@v3
-      {% raw %}
+      {%- raw %}
       - name: ${{ matrix.name }}
-        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "platform=macOS" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
-      {% endraw %}
+      {%- endraw %}
+        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "platform=macOS" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ '{{ matrix.name }}' }}.xcresult" || exit 1
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
-          {% raw %}
+          {%- raw %}
           token: ${{ secrets.CODECOV_TOKEN }}
-          {% endraw %}
+          {%- endraw %}
           xcode: true
-          {% raw %}
+          {%- raw %}
           xcode_archive_path: test_output/${{ matrix.name }}.xcresult
-          {% endraw %}
+          {%- endraw %}
       - uses: actions/upload-artifact@v4
         with:
-          {% raw %}
+          {%- raw %}
           name: ${{ matrix.name }}
-          {% endraw %}
+          {%- endraw %}
           path: test_output
-  {% endif %}
+  {%- endif %}
 
-  {% if cookiecutter.ios == "Yes" %}
+  {%- if cookiecutter.ios == "Yes" %}
   iOS:
-    {% raw %}
+    {%- raw %}
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.runsOn }}
-    {% endraw %}
+    {%- endraw %}
     env:
-      {% raw %}
+      {%- raw %}
       DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-      {% endraw %}
+      {%- endraw %}
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -103,28 +103,28 @@ jobs:
             runsOn: macos-13
     steps:
       - uses: actions/checkout@v3
-        {% raw %}
+        {%- raw %}
       - name: ${{ matrix.name }}
-        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "${{ matrix.destination }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
-        {% endraw %}
+        {%- endraw %}
+        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "${{ '{{ matrix.destination }}' }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ '{{ matrix.name }}' }}.xcresult" || exit 1
       - uses: actions/upload-artifact@v4
         with:
-          {% raw %}
+          {%- raw %}
           name: ${{ matrix.name }}
           path: test_output
-          {% endraw %}
-  {% endif %}
+          {%- endraw %}
+  {%- endif %}
 
-  {% if cookiecutter.tvOS == "Yes" %}
+  {%- if cookiecutter.tvOS == "Yes" %}
   tvOS:
-    {% raw %}
+    {%- raw %}
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.runsOn }}
-    {% endraw %}
+    {%- endraw %}
     env:
-      {% raw %}
+      {%- raw %}
       DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-      {% endraw %}
+      {%- endraw %}
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -140,38 +140,38 @@ jobs:
             runsOn: macos-13
     steps:
       - uses: actions/checkout@v3
-      {% raw %}
+      {%- raw %}
       - name: ${{ matrix.name }}
-        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "${{ matrix.destination }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
-      {% endraw %}
+      {%- endraw %}
+        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination ${{ '{{ matrix.destination }}' }} clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ '{{ matrix.name }}' }}.xcresult" || exit 1
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
-          {% raw %}
+          {%- raw %}
           token: ${{ secrets.CODECOV_TOKEN }}
-          {% endraw %}
+          {%- endraw %}
           xcode: true
-          {% raw %}
+          {%- raw %}
           xcode_archive_path: test_output/${{ matrix.name }}.xcresult
-          {% endraw %}
+          {%- endraw %}
       - uses: actions/upload-artifact@v4
         with:
-          {% raw %}
+          {%- raw %}
           name: ${{ matrix.name }}
-          {% endraw %}
+          {%- endraw %}
           path: test_output
-  {% endif %}
+  {%- endif %}
 
-  {% if cookiecutter.watchOS == "Yes" %}
+  {%- if cookiecutter.watchOS == "Yes" %}
   watchOS:
-    {% raw %}
+    {%- raw %}
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.runsOn }}
-    {% endraw %}
+    {%- endraw %}
     env:
-      {% raw %}
+      {%- raw %}
       DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-      {% endraw %}
+      {%- endraw %}
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -191,37 +191,37 @@ jobs:
             runsOn: macos-13
     steps:
       - uses: actions/checkout@v3
-      {% raw %}
+      {%- raw %}
       - name: ${{ matrix.name }}
-        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "${{ matrix.destination }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
-      {% endraw %}
+      {%- endraw %}
+        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "${{ '{{ matrix.destination }}' }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ '{{ matrix.name }}' }}.xcresult" || exit 1
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
-          {% raw %}
+          {%- raw %}
           token: ${{ secrets.CODECOV_TOKEN }}
-          {% endraw %}
+          {%- endraw %}
           xcode: true
-          {% raw %}
+          {%- raw %}
           xcode_archive_path: test_output/${{ matrix.name }}.xcresult
-          {% endraw %}
+          {%- endraw %}
       - uses: actions/upload-artifact@v4
         with:
-          {% raw %}
+          {%- raw %}
           name: ${{ matrix.name }}
-          {% endraw %}
+          {%- endraw %}
           path: test_output
-  {% endif %}
+  {%- endif %}
 
   spm:
-    {% raw %}
+    {%- raw %}
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.runsOn }}
-    {% endraw %}
+    {%- endraw %}
     env:
-      {% raw %}
+      {%- raw %}
       DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-      {% endraw %}
+      {%- endraw %}
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -235,10 +235,10 @@ jobs:
             runsOn: macos-13
     steps:
       - uses: actions/checkout@v3
-      {% raw %}
+      {%- raw %}
       - name: ${{ matrix.name }}
+      {%- endraw %}
         run: swift build -c release --target "{{ cookiecutter.name }}"
-      {% endraw %}
   merge-test-reports:
     needs: [iOS, macOS, watchOS, tvOS]
     runs-on: macos-13
