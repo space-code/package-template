@@ -35,7 +35,7 @@ Released on 2025-04-20
 
 ## Fixed
 - Fix the replacement of Cookiecutter parameters.
-  - Fixed in Pull Request [#16](https://github.com/space-code/package-template/pull/16).
+  - Fixed in Pull Request [#19](https://github.com/space-code/package-template/pull/19).
 
 ## [1.1.1](https://github.com/space-code/package-template/releases/tag/1.1.1)
 Released on 2023-12-18
