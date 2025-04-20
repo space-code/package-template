@@ -1,7 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+#### 1.x Releases
+- `1.2.x` Releases - [1.2.0](#120)
+- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
+- `1.0.x` Releases - [1.0.0](#100)
+
+## [1.2.0](https://github.com/space-code/package-template/releases/tag/1.2.0)
+Released on 2025-04-20
 
 ## Added
 - Add the `Dependapot` action
@@ -27,9 +33,9 @@ All notable changes to this project will be documented in this file.
 - Update the `post_get_project` script
   - Updated in Pull Request [#14](https://github.com/space-code/package-template/pull/14).
 
-#### 1.x Releases
-- `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
-- `1.0.x` Releases - [1.0.0](#100)
+## Fixed
+- Fix the replacement of Cookiecutter parameters.
+  - Fixed in Pull Request [#16](https://github.com/space-code/package-template/pull/16).
 
 ## [1.1.1](https://github.com/space-code/package-template/releases/tag/1.1.1)
 Released on 2023-12-18
