@@ -39,7 +39,7 @@ jobs:
             --transform-for-static-hosting \
             --hosting-base-path {{ cookiecutter.name | lower }};
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: 'docs'
       - name: Deploy to GitHub Pages
