@@ -5,22 +5,14 @@ on: [push]
 jobs:
   test:
     runs-on: macos-14
-    env:
-      MINT_PATH: "~/mint_cache"
 
     steps:
       - uses: actions/checkout@v5
-
-      - name: Cache Mint
-        id: cache-mint
-        uses: actions/cache@v4
-        with:
-          path: ~/mint_cache
-          key: cache
+      - uses: jdx/mise-action@v3
 
       - name: Generate project and run tests
         run: |
-          brew install cookiecutter mint
+          brew install cookiecutter
           cookiecutter --no-input -f .
-          mint bootstrap
+          mise install
           swift test
