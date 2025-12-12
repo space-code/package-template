@@ -44,7 +44,7 @@ jobs:
           path: 'docs'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
       {% endif -%}
       {% if cookiecutter.docc_custom_branch == "Yes" -%}
       - name: Build and Push Generated Documentation
