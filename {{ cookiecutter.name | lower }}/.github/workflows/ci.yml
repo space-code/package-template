@@ -16,7 +16,7 @@ jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
@@ -56,7 +56,7 @@ jobs:
             runsOn: macos-13
             name: "macOS 13, Xcode 14.3.1, Swift 5.8.0"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       {%- raw %}
       - name: ${{ matrix.name }}
       {%- endraw %}
@@ -111,7 +111,7 @@ jobs:
             xcode: "Xcode_14.3.1"
             runsOn: macos-13
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         {%- raw %}
       - name: ${{ matrix.name }}
         {%- endraw %}
@@ -156,7 +156,7 @@ jobs:
             xcode: "Xcode_14.3.1"
             runsOn: macos-13
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       {%- raw %}
       - name: ${{ matrix.name }}
       {%- endraw %}
@@ -215,7 +215,7 @@ jobs:
             xcode: "Xcode_14.3.1"
             runsOn: macos-13
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       {%- raw %}
       - name: ${{ matrix.name }}
       {%- endraw %}
@@ -262,7 +262,7 @@ jobs:
             xcode: "Xcode_14.3.1"
             runsOn: macos-13
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       {%- raw %}
       - name: ${{ matrix.name }}
       {%- endraw %}
@@ -288,7 +288,7 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_14.1.app/Contents/Developer
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Discover typos
         run: |
           export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.11/bin"
