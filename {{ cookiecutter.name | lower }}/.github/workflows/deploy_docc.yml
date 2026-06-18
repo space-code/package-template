@@ -24,7 +24,7 @@ jobs:
     runs-on: macos-12
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
           # Fetch all history for all branches and tags.
           fetch-depth: 0
         {% if cookiecutter.docc_custom_branch == "No" -%}
